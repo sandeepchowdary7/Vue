@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Add Name to Array</title>
+	</head>
+	<body>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.14/dist/vue.js"></script>
+		<div id="root">
+			<ul>
+			    <li v-for="name in names" v-text="name"></li>
+			</ul>
+			<input type="text" v-model="newName">
+			<button type="submit" @click="addName">Add Name</button>
+		</div>
+		<script>
+			new Vue({
+
+				el: "#root",
+
+				data: {
+					newName: '',
+					names: ['sandip','Himansh','Udaya','Sravs']
+				},
+
+				methods: {
+					addName(){
+						if(this.newName.length != 0 ){
+							this.names.push(this.newName),
+							this.newName = ''
+						}
+						else {
+							alert('Please Enter a valid input');
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

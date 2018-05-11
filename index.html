@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Introduction Vue.js Learning</title>
+	</head>
+	<body>
+		<div id="root">
+			<input type="text" id="input" v-model="msg">
+			<p>Hey I'm here n {{ msg }} </p>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.14/dist/vue.js"></script>
+
+		<script>
+		new Vue({
+			el: '#root',
+			data (){
+				return{
+				msg: 'Hello World'
+			  }
+			}
+		})
+		</script>
+	</body>
+</html>
+
+

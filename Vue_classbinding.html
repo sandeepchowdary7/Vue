@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css" media="screen">
+	.isLoading{background: orange;}
+</style>
+	<head>
+		<title>Vue Js Class and Attribute Binding</title>
+	</head>
+	<body>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.14/dist/vue.js"></script>
+		<div id="radio">
+			 <input type="radio" name="gender" value="Male" v-model="checkedNames">
+			 <label for="Male">Male</label><br>
+ 			 <input type="radio" name="gender" value="Female" v-model="checkedNames">
+ 			 <label for="Female">Female</label><br>
+ 			 <input type="radio" name="gender" value="Other" v-model="checkedNames">
+ 			 <label for="Other">Other</label><br>
+ 		</div>
+		<br>
+		<div id="submit">
+		<span> Value: {{ checkedNames }} </span>
+		<br>
+			<button type="submit" :title="title" :class="{ 'isLoading': isLoading }" @click="toggleMe">Submit</button>
+		</div>
+		<script>
+			new Vue({
+				el: "#submit",
+
+				data: {
+					checkedNames: '',
+					title: "Sandeep Click here",
+					isLoading: false,
+				},
+
+				methods: {
+					toggleMe(){
+						if(this.checkedNames.length != 0) {
+							alert('yolo! You checked '+ this.checkedNames);
+							this.isLoading = true;
+						}
+						else {
+							alert('Jus Kidding. Enter Valid input');
+						}
+					}
+				}
+			});
+		</script>
+
+	</body>
+</html>

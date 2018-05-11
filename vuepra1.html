@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue Js Pract1</title>
+</head>
+<body>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.14/dist/vue.js"></script>
+	<div id="pra1">
+		<input type="text" name="" v-model="msg">
+		<p>Hey It's me {{ msg }} ! Im Learning Vue JS </p>
+	</div>
+	<script>
+		new Vue({
+			el: "#pra1",
+			data: {
+				msg: " "
+			}
+		})
+	</script>
+
+</body>
+</html>

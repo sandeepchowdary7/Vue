@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello Everyone. This is my Vue JS Practise</title>
+</head>
+	<body>
+		<div id="text">
+			<input type="text" id="input" v-model="msg"/>
+			<!-- <p>Hey I'm here n {{ input }} </p> -->
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.14/dist/vue.js"></script>
+		<script>
+			new Vue({
+				el: '#text',
+				data: {
+					msg: 'Hey Everyone'
+				}
+			})
+		</script>
+
+	</body>
+</html>
