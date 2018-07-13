@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue-Index Page</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+	<div id="root">
+		<input type="text" name="msg" v-model="msg">
+		<p>Hello Welcome to {{msg}}</p>
+	</div>
+
+	<script>
+		new Vue({
+			el: '#root',
+			data(){
+				return {
+					msg: 'My Page'
+				}
+			}
+		})
+	</script>
+</body>
+</html>
