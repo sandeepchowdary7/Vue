@@ -1,6 +1,6 @@
 Vue.component('tabs', {
 
-    template: 
+    template:
         `
         <div>
             <div class="tabs">
@@ -24,17 +24,13 @@ Vue.component('tabs', {
 });
 
 Vue.component('tab', {
-    template: 
-    `
-    <div><slot></slot></div>
-    `,
+    template:
+    `<div><slot></slot></div> `,
 
     props: {
         name: {required:true}
     }
 });
-
-
 
 new Vue({
     el: "#app"
