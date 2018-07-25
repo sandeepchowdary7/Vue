@@ -11,15 +11,17 @@
         	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
         </head>
         <body>
-            <div id="computed">
-                {{ fullname }}
+            <div id="computed" class="container">
+                FirstName: <input type="text" v-model="firstname">
+                LastName: <input type="text" v-model="lastname"><br></br>
+                My fullname is : {{ fullname }}
             </div>
             <script>
                 new Vue({
                     el: "#computed",
                     data: {
-                        firstname: 'sandeep',
-                        lastname: 'choudary'
+                        firstname: ' ',
+                        lastname: ' '
                     },
                     computed: {
                         fullname:  function () {
