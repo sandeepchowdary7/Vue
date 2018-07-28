@@ -1,5 +1,4 @@
 Vue.component('tabs', {
-
     template:
         `
         <div>
@@ -48,9 +47,11 @@ Vue.component('tab', {
               isActive: false
        } 
     },
-
-            return '#' + this.name.toLowerCase(). replace(/ /g, '-');
-        }
+    
+    computed: {
+        href() {
+                    return '#' + this.name.toLowerCase(). replace(/ /g, '-');
+                }
     },
 
     mounted () {

@@ -59,7 +59,7 @@ Vue.component('tab', {
     },
 
     mounted () {
-         this.isActive = this.selectTab;
+         this.isActive = this.selected;
     }
 }),
 
