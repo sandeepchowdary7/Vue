@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Vue-Component-Communication</title>
+        <meta name="description">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    </head>
+    <style lang="css">
+         .container { 
+             padding:80px;
+             }
+    </style>
+    <body>
+
+        <div id="component" class="container">
+            <coupon @applied="onCouponApplied"></coupon>
+            <h1 v-if="appliedMsg">Coupon was Applied.</h1>
+        </div>
+        
+        <script src="Vue-Component-Communication.js" async defer></script>
+    </body>
+</html>
