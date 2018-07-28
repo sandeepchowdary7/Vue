@@ -11,28 +11,22 @@
         <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     </head>
     <body>
-        <div class="container">
-                <div class="tabs is-right">
-                    <ul>
-                        <li class="is-active">
-                            <a>Pictures</a>
-                            <h1>This is a Picture Tab</h1>
-                        </li>
-                        <li>
-                            \<a>Music</a>
-                            <h1>This is a Music Tab</h1>
-                        </li>
-                        <li>
-                            <a>Videos</a>
-                            <h1>This is a Videos Tab</h1>
-                        </li>
-                        <li>
-                            <a>Documents</a>
-                            <h1>This is a Documents Tab</h1>
-                        </li>
-                    </ul>
-                </div>
+        <div  id="tab3" class="container">
+            <tabs>
+                <tab name="Pictures" :selected="true">
+                    <h1>This is a Picture Tab</h1>
+                </tab>
+                <tab name="Music">
+                    <h1>This is a Music Tab</h1>
+                </tab>
+                <tab name="Videos">
+                    <h1>This is a Videos Tab</h1>
+                </tab>
+                <tab name="Documents">
+                    <h1>This is a Documents Tab</h1>
+                </tab>
+            </tabs>
          </div>
-        <script src="" async defer></script>
+        <script src="tab3.js" async defer></script>
     </body>
 </html>
