@@ -3,15 +3,29 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
+        <title>Vue Named Solts</title>
+        <meta name="description">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     </head>
     <body>
-       <div id="slots" class="container">
+       <div id="slot" class="container">
+        <modal>
+            <div slot="header">My Title</div>
 
+            So far, we've only reviewed default component slots. Or, in other words, "take this bit of content, 
+            and insert it right there, as designated by the slot tags. 
+            But what about when we require more control? A modal component is a 
+            perfect example of this. If you want to slot a header section in one place, 
+            and a footer section in another, named slots are exactly what you need.
 
+            <div slot="footer">
+                <button class="button is-success"> Submit</button>
+                <button class="button is-danger">Cancel</button>
+            </div>
+       </modal>
        </div>
         <script src="NamedSlots.js" async defer></script>
     </body>
